@@ -1,0 +1,54 @@
+﻿@model Quotes_App.Models.Quote
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>Please add to our wonderful collection of quotes</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="QuoteText" class="control-label">Quote</label>
+                <input asp-for="QuoteText" class="form-control" />
+                <span asp-validation-for="QuoteText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AuhtorFname" class="control-label">Author First Name</label>
+                <input asp-for="AuhtorFname" class="form-control" />
+                <span asp-validation-for="AuhtorFname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AuthorLname" class="control-label">Author Last Name</label>
+                <input asp-for="AuthorLname" class="form-control" />
+                <span asp-validation-for="AuthorLname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Subject" class="control-label">Subject</label>
+                <input asp-for="Subject" class="form-control" />
+                <span asp-validation-for="Subject" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cite" class="control-label">Citation</label>
+                <input asp-for="Cite" class="form-control" />
+                <span asp-validation-for="Cite" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

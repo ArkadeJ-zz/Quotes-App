@@ -1,0 +1,49 @@
+﻿@model Quotes_App.Models.Quote
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Quote</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.QuoteText)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.QuoteText)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AuhtorFname)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AuhtorFname)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AuthorLname)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AuthorLname)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Subject)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Subject)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Cite)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Cite)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.QuoteId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
